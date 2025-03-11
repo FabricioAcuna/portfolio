@@ -9,7 +9,10 @@ export default function Home() {
       <div className="flex justify-center mt-14 mx-20">
         <div className=" flex gap-20 items-center">
           <h1 className="text-5xl text-cyan-950">
-            Hi!, <br />
+            <span className=" bg-gradient-to-r from-violet-500 to-green-500  text-transparent bg-clip-text">
+              Hi!
+            </span>
+            , <br />
             My name is <br />
             Fabricio <br />I build things for web.
           </h1>

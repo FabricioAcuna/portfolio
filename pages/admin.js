@@ -13,11 +13,12 @@ export default function Admin() {
   const [projectDescription, setProjectDescription] = useState("");
   const [projectImage, setProjectImage] = useState("");
   const [projectUrl, setProjectUrl] = useState("");
+  const [projectUrlSite, setProjectUrlSite] = useState("");
 
   const [techSkillImage, setTechSkillImage] = useState("");
 
   function handleLogin() {
-    if (username === "admin" && password === "your password") {
+    if (username === "admin" && password === "123") {
       setLoggedIn(true);
     } else {
       alert("Invalid login");
@@ -25,12 +26,19 @@ export default function Admin() {
   }
 
   function handleCreateProject() {
-    if (projectName && projectDescription && projectImage && projectUrl) {
+    if (
+      projectName &&
+      projectDescription &&
+      projectImage &&
+      projectUrl &&
+      projectUrlSite
+    ) {
       const newProject = {
         title: projectName,
         desc: projectDescription,
         imgLink: projectImage,
         url: projectUrl,
+        url: projectUrlSite,
       };
 
       setProjects([...projects, newProject]);
@@ -38,6 +46,7 @@ export default function Admin() {
       setProjectDescription("");
       setProjectImage("");
       setProjectUrl("");
+      setProjectUrlSite("");
     }
   }
 
@@ -116,11 +125,17 @@ export default function Admin() {
           value={projectImage}
           onChange={(e) => setProjectImage(e.target.value)}
         />
-        <label>URL</label>
+        <label>URL Github</label>
         <input
           className="border border-solid border-black"
           value={projectUrl}
           onChange={(e) => setProjectUrl(e.target.value)}
+        />
+        <label>URL Site</label>
+        <input
+          className="border border-solid border-black"
+          value={projectUrlSite}
+          onChange={(e) => setProjectUrlSite(e.target.value)}
         />
       </div>
       <button
