@@ -38,7 +38,7 @@ export default function Admin() {
         desc: projectDescription,
         imgLink: projectImage,
         url: projectUrl,
-        url: projectUrlSite,
+        urlSite: projectUrlSite,
       };
 
       setProjects([...projects, newProject]);

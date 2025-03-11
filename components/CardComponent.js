@@ -1,4 +1,4 @@
-export default function CardComponent({ title, desc, imgLink, url }) {
+export default function CardComponent({ title, desc, imgLink, url, urlGit }) {
   return (
     <div className="border dark:border-black rounded-xl max-w-4xl">
       <img src={imgLink} className="rounded-t-xl h-72 w-full"></img>
@@ -8,7 +8,7 @@ export default function CardComponent({ title, desc, imgLink, url }) {
         <p>{desc}</p>
         <div className="flex gap-4">
           <a
-            href={url}
+            href={urlGit}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 pt-4"

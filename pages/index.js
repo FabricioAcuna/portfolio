@@ -44,6 +44,7 @@ export default function Home() {
             title={project.title}
             desc={project.desc}
             imgLink={project.imgLink}
+            urlGit={project.urlGit}
             url={project.url}
           />
         ))}
